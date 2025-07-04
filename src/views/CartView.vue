@@ -22,12 +22,7 @@ function proceedToCheckout() {
       <div v-if="productStore.cart.length > 0">
         <div id="cart-items">
           <div v-for="item in productStore.cart" :key="item.id" class="cart-item">
-            <div class="cart-item-img">
-              <img
-                :src="`https://placehold.co/100x100/161B22/e6edf3?text=${encodeURIComponent(item.name)}`"
-                :alt="item.name"
-              />
-            </div>
+            <div class="cart-item-img"><img :src="item.imageUrl" :alt="item.name" /></div>
             <div class="cart-item-details">
               <div class="cart-item-title">{{ item.name }}</div>
               <div class="cart-item-pricing">

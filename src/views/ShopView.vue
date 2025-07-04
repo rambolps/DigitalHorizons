@@ -194,10 +194,7 @@ watch(
       <div class="product-grid">
         <div v-for="product in filteredProducts" :key="product.id" class="product-card">
           <div class="product-image">
-            <img
-              :src="`https://placehold.co/400x400/161B22/e6edf3?text=${encodeURIComponent(product.name)}`"
-              :alt="product.name"
-            />
+            <img :src="product.imageUrl" :alt="product.name" />
             <span v-if="product.salePrice" class="sale-badge">SALE</span>
           </div>
           <div class="product-info">

@@ -1,14 +1,16 @@
 <script setup>
 import { useProductStore } from '@/stores/products'
+import { useUIStore } from '@/stores/ui'
 import { useRouter } from 'vue-router'
 
 const productStore = useProductStore()
+const uiStore = useUIStore()
 const router = useRouter()
 
 function placeOrder() {
-  alert('Thank you for your order! Your purchase has been confirmed.')
   productStore.clearCart()
-  router.push('/')
+  router.push('/survey')
+  uiStore.showNotification('Order confirmed! Please take a moment for our survey.')
 }
 </script>
 

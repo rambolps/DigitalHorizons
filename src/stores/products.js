@@ -1,5 +1,6 @@
 import { ref, computed } from 'vue'
 import { defineStore } from 'pinia'
+import { useUIStore } from './ui'
 
 export const useProductStore = defineStore('products', () => {
   const products = ref([
@@ -12,6 +13,7 @@ export const useProductStore = defineStore('products', () => {
       price: 2899.99,
       salePrice: 2699.99,
       featured: true,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=NovaBook+Pro',
       specs: { ram: '16GB', cpu: 'Intel Core i9', storage: '1TB SSD', screenSize: '16"' },
     },
     {
@@ -20,6 +22,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Laptops',
       brand: 'Nova',
       price: 1799.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=NovaBook+Air',
       specs: { ram: '16GB', cpu: 'Intel Core i7', storage: '512GB SSD', screenSize: '14"' },
     },
     {
@@ -30,6 +33,7 @@ export const useProductStore = defineStore('products', () => {
       price: 3499.0,
       salePrice: 3299.0,
       featured: true,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=QuantumGamer',
       specs: { ram: '32GB', cpu: 'AMD Ryzen 9', storage: '2TB SSD', screenSize: '17"' },
     },
     {
@@ -38,6 +42,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Laptops',
       brand: 'Chrono',
       price: 4200.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=ChronoWorkstation',
       specs: { ram: '64GB', cpu: 'Intel Core i9', storage: '4TB SSD', screenSize: '15.6"' },
     },
     {
@@ -47,6 +52,7 @@ export const useProductStore = defineStore('products', () => {
       brand: 'Nova',
       price: 1299.0,
       salePrice: 1149.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=NovaBook+Lite',
       specs: { ram: '8GB', cpu: 'Intel Core i5', storage: '256GB SSD', screenSize: '13.3"' },
     },
     {
@@ -55,6 +61,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Laptops',
       brand: 'Apex',
       price: 2199.99,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Apex+Predator',
       specs: { ram: '16GB', cpu: 'AMD Ryzen 7', storage: '1TB SSD', screenSize: '15.6"' },
     },
     {
@@ -63,6 +70,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Laptops',
       brand: 'Quantum',
       price: 3899.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Quantum+Creator',
       specs: { ram: '32GB', cpu: 'Intel Core i9', storage: '2TB SSD', screenSize: '16"' },
     },
     {
@@ -72,6 +80,7 @@ export const useProductStore = defineStore('products', () => {
       brand: 'Aether',
       price: 1599.0,
       salePrice: 1399.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Aether+UltraSlim',
       specs: { ram: '16GB', cpu: 'Intel Core i7', storage: '1TB SSD', screenSize: '13.4"' },
     },
     {
@@ -80,6 +89,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Laptops',
       brand: 'Chrono',
       price: 1450.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Chrono+Traveler',
       specs: { ram: '8GB', cpu: 'AMD Ryzen 5', storage: '512GB SSD', screenSize: '14"' },
     },
     {
@@ -88,6 +98,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Laptops',
       brand: 'Nova',
       price: 2599.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=NovaBook+Pro+14',
       specs: { ram: '16GB', cpu: 'Intel Core i7', storage: '1TB SSD', screenSize: '14"' },
     },
     {
@@ -96,6 +107,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Laptops',
       brand: 'Quantum',
       price: 2899.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Quantum+Stealth',
       specs: { ram: '32GB', cpu: 'AMD Ryzen 7', storage: '1TB SSD', screenSize: '14"' },
     },
     {
@@ -104,6 +116,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Laptops',
       brand: 'Apex',
       price: 4800.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Apex+Titan',
       specs: { ram: '64GB', cpu: 'Intel Core i9', storage: '2TB SSD', screenSize: '16"' },
     },
     {
@@ -112,6 +125,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Laptops',
       brand: 'Aether',
       price: 1999.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Aether+Flow',
       specs: { ram: '16GB', cpu: 'Intel Core i7', storage: '1TB SSD', screenSize: '15.6"' },
     },
     {
@@ -121,6 +135,7 @@ export const useProductStore = defineStore('products', () => {
       brand: 'Chrono',
       price: 1650.0,
       salePrice: 1450.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=ChronoBook+Flip',
       specs: { ram: '16GB', cpu: 'AMD Ryzen 7', storage: '512GB SSD', screenSize: '13.3"' },
     },
     {
@@ -129,6 +144,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Laptops',
       brand: 'Nova',
       price: 1899.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Nova+Enterprise',
       specs: { ram: '16GB', cpu: 'Intel Core i5', storage: '1TB SSD', screenSize: '15.6"' },
     },
     {
@@ -137,6 +153,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Laptops',
       brand: 'Quantum',
       price: 1999.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=QuantumGamer+Lite',
       specs: { ram: '16GB', cpu: 'Intel Core i7', storage: '1TB SSD', screenSize: '15.6"' },
     },
     {
@@ -145,6 +162,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Laptops',
       brand: 'Apex',
       price: 1350.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Apex+Nomad',
       specs: { ram: '8GB', cpu: 'Intel Core i5', storage: '512GB SSD', screenSize: '13.3"' },
     },
     {
@@ -153,6 +171,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Laptops',
       brand: 'Aether',
       price: 3200.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Aether+Vision',
       specs: { ram: '32GB', cpu: 'Intel Core i9', storage: '1TB SSD', screenSize: '17"' },
     },
     {
@@ -161,6 +180,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Laptops',
       brand: 'Chrono',
       price: 2200.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Chrono+Coder',
       specs: { ram: '32GB', cpu: 'AMD Ryzen 7', storage: '1TB SSD', screenSize: '15.6"' },
     },
     {
@@ -169,10 +189,9 @@ export const useProductStore = defineStore('products', () => {
       category: 'Laptops',
       brand: 'Nova',
       price: 999.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=NovaBook+Essential',
       specs: { ram: '8GB', cpu: 'Intel Core i3', storage: '256GB SSD', screenSize: '15.6"' },
     },
-
-    // Smartphones (20)
     {
       id: 2,
       name: 'AetherPhone XV',
@@ -181,6 +200,7 @@ export const useProductStore = defineStore('products', () => {
       price: 1599.0,
       salePrice: 1499.0,
       featured: true,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=AetherPhone+XV',
       specs: { storage: '256GB' },
     },
     {
@@ -190,6 +210,7 @@ export const useProductStore = defineStore('products', () => {
       brand: 'Aether',
       price: 899.0,
       salePrice: 799.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=AetherPhone+SE',
       specs: { storage: '128GB' },
     },
     {
@@ -198,6 +219,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Smartphones',
       brand: 'Apex',
       price: 1399.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Apex+One+Pro',
       specs: { storage: '512GB' },
     },
     {
@@ -206,6 +228,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Smartphones',
       brand: 'Aether',
       price: 1899.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=AetherPhone+Max',
       specs: { storage: '1TB' },
     },
     {
@@ -215,6 +238,7 @@ export const useProductStore = defineStore('products', () => {
       brand: 'Quantum',
       price: 1199.0,
       salePrice: 1049.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Quantum+Leap',
       specs: { storage: '256GB' },
     },
     {
@@ -223,6 +247,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Smartphones',
       brand: 'Nova',
       price: 699.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Nova+Connect',
       specs: { storage: '128GB' },
     },
     {
@@ -231,6 +256,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Smartphones',
       brand: 'Chrono',
       price: 2199.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Chrono+Fold',
       specs: { storage: '512GB' },
     },
     {
@@ -239,6 +265,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Smartphones',
       brand: 'Apex',
       price: 999.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Apex+One+Mini',
       specs: { storage: '256GB' },
     },
     {
@@ -248,6 +275,7 @@ export const useProductStore = defineStore('products', () => {
       brand: 'Aether',
       price: 2099.0,
       salePrice: 1899.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=AetherPhone+Ultra',
       specs: { storage: '1TB' },
     },
     {
@@ -256,6 +284,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Smartphones',
       brand: 'Quantum',
       price: 1750.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Quantum+Shift',
       specs: { storage: '512GB' },
     },
     {
@@ -264,6 +293,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Smartphones',
       brand: 'Nova',
       price: 850.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Nova+Link',
       specs: { storage: '256GB' },
     },
     {
@@ -272,6 +302,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Smartphones',
       brand: 'Apex',
       price: 750.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Apex+Challenger',
       specs: { storage: '128GB' },
     },
     {
@@ -280,6 +311,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Smartphones',
       brand: 'Quantum',
       price: 1999.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Quantum+Photon',
       specs: { storage: '1TB' },
     },
     {
@@ -288,6 +320,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Smartphones',
       brand: 'Aether',
       price: 1099.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Aether+Classic',
       specs: { storage: '256GB' },
     },
     {
@@ -296,6 +329,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Smartphones',
       brand: 'Chrono',
       price: 1300.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Chrono+Snap',
       specs: { storage: '256GB' },
     },
     {
@@ -304,6 +338,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Smartphones',
       brand: 'Nova',
       price: 499.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Nova+Core',
       specs: { storage: '64GB' },
     },
     {
@@ -312,6 +347,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Smartphones',
       brand: 'Apex',
       price: 1599.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Apex+Edge%2B',
       specs: { storage: '512GB' },
     },
     {
@@ -320,6 +356,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Smartphones',
       brand: 'Quantum',
       price: 1400.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Quantum+Vision',
       specs: { storage: '256GB' },
     },
     {
@@ -328,6 +365,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Smartphones',
       brand: 'Aether',
       price: 1250.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Aether+Compact',
       specs: { storage: '128GB' },
     },
     {
@@ -336,16 +374,16 @@ export const useProductStore = defineStore('products', () => {
       category: 'Smartphones',
       brand: 'Chrono',
       price: 1550.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Chrono+Flip+2',
       specs: { storage: '256GB' },
     },
-
-    // Tablets (20)
     {
       id: 3,
       name: 'QuantumPad Air',
       category: 'Tablets',
       brand: 'Quantum',
       price: 1199.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=QuantumPad+Air',
       specs: { storage: '256GB' },
     },
     {
@@ -354,6 +392,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Tablets',
       brand: 'Quantum',
       price: 1699.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=QuantumPad+Pro',
       specs: { storage: '512GB' },
     },
     {
@@ -363,6 +402,7 @@ export const useProductStore = defineStore('products', () => {
       brand: 'Nova',
       price: 799.0,
       salePrice: 699.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=NovaTab+Go',
       specs: { storage: '128GB' },
     },
     {
@@ -371,6 +411,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Tablets',
       brand: 'Aether',
       price: 1450.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Aether+Slate+Pro',
       specs: { storage: '256GB' },
     },
     {
@@ -379,6 +420,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Tablets',
       brand: 'Chrono',
       price: 950.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=ChronoNote+11',
       specs: { storage: '128GB' },
     },
     {
@@ -388,6 +430,7 @@ export const useProductStore = defineStore('products', () => {
       brand: 'Quantum',
       price: 899.0,
       salePrice: 799.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=QuantumPad+Mini',
       specs: { storage: '256GB' },
     },
     {
@@ -396,6 +439,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Tablets',
       brand: 'Apex',
       price: 1899.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Apex+Canvas',
       specs: { storage: '512GB' },
     },
     {
@@ -404,6 +448,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Tablets',
       brand: 'Nova',
       price: 1099.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=NovaTab+Max',
       specs: { storage: '256GB' },
     },
     {
@@ -412,6 +457,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Tablets',
       brand: 'Aether',
       price: 650.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Aether+Slate+Lite',
       specs: { storage: '128GB' },
     },
     {
@@ -421,6 +467,7 @@ export const useProductStore = defineStore('products', () => {
       brand: 'Chrono',
       price: 1150.0,
       salePrice: 999.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=ChronoNote+Plus',
       specs: { storage: '256GB' },
     },
     {
@@ -429,6 +476,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Tablets',
       brand: 'Quantum',
       price: 1299.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=QuantumPad+Pro+11',
       specs: { storage: '256GB' },
     },
     {
@@ -437,6 +485,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Tablets',
       brand: 'Nova',
       price: 399.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=NovaTab+Kids',
       specs: { storage: '64GB' },
     },
     {
@@ -446,6 +495,7 @@ export const useProductStore = defineStore('products', () => {
       brand: 'Aether',
       price: 1999.0,
       salePrice: 1749.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Aether+Slate+Max',
       specs: { storage: '1TB' },
     },
     {
@@ -454,6 +504,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Tablets',
       brand: 'Chrono',
       price: 1550.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=ChronoNote+Pro',
       specs: { storage: '512GB' },
     },
     {
@@ -462,6 +513,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Tablets',
       brand: 'Apex',
       price: 2100.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Apex+StudioPad',
       specs: { storage: '1TB' },
     },
     {
@@ -470,6 +522,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Tablets',
       brand: 'Quantum',
       price: 750.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=QuantumPad+Go',
       specs: { storage: '128GB' },
     },
     {
@@ -478,6 +531,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Tablets',
       brand: 'Nova',
       price: 950.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=NovaTab+Pro',
       specs: { storage: '256GB' },
     },
     {
@@ -486,6 +540,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Tablets',
       brand: 'Aether',
       price: 850.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Aether+Slate+Basic',
       specs: { storage: '128GB' },
     },
     {
@@ -494,6 +549,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Tablets',
       brand: 'Chrono',
       price: 1350.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Chrono+DrawPad',
       specs: { storage: '256GB' },
     },
     {
@@ -502,16 +558,16 @@ export const useProductStore = defineStore('products', () => {
       category: 'Tablets',
       brand: 'Apex',
       price: 450.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Apex+Reader',
       specs: { storage: '64GB' },
     },
-
-    // Desktops (20)
     {
       id: 14,
       name: 'QuantumForge Creator',
       category: 'Desktops',
       brand: 'Quantum',
       price: 3250.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=QuantumForge+Creator',
       specs: { ram: '32GB', cpu: 'Intel Core i7', storage: '1TB SSD + 2TB HDD' },
     },
     {
@@ -522,6 +578,7 @@ export const useProductStore = defineStore('products', () => {
       price: 4500.0,
       salePrice: 4250.0,
       featured: true,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Apex+Gaming+Rig',
       specs: { ram: '32GB', cpu: 'AMD Ryzen 9', storage: '2TB SSD' },
     },
     {
@@ -530,6 +587,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Desktops',
       brand: 'Nova',
       price: 1499.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Nova+Office',
       specs: { ram: '16GB', cpu: 'Intel Core i5', storage: '512GB SSD' },
     },
     {
@@ -538,6 +596,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Desktops',
       brand: 'Chrono',
       price: 5500.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=ChronoWorkstation',
       specs: { ram: '64GB', cpu: 'Intel Core i9', storage: '4TB SSD' },
     },
     {
@@ -547,6 +606,7 @@ export const useProductStore = defineStore('products', () => {
       brand: 'Quantum',
       price: 1100.0,
       salePrice: 950.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Quantum+Mini+PC',
       specs: { ram: '16GB', cpu: 'AMD Ryzen 5', storage: '512GB SSD' },
     },
     {
@@ -555,6 +615,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Desktops',
       brand: 'Apex',
       price: 2999.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Apex+Streamer',
       specs: { ram: '32GB', cpu: 'Intel Core i7', storage: '1TB SSD' },
     },
     {
@@ -564,6 +625,7 @@ export const useProductStore = defineStore('products', () => {
       brand: 'Aether',
       price: 2499.0,
       salePrice: 2299.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Aether+AIO',
       specs: { ram: '16GB', cpu: 'Intel Core i7', storage: '1TB SSD' },
     },
     {
@@ -572,6 +634,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Desktops',
       brand: 'Nova',
       price: 999.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Nova+Home+PC',
       specs: { ram: '8GB', cpu: 'Intel Core i3', storage: '256GB SSD' },
     },
     {
@@ -580,6 +643,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Desktops',
       brand: 'Quantum',
       price: 6200.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=QuantumForge+Elite',
       specs: { ram: '64GB', cpu: 'AMD Ryzen 9', storage: '4TB SSD' },
     },
     {
@@ -589,6 +653,7 @@ export const useProductStore = defineStore('products', () => {
       brand: 'Apex',
       price: 1999.0,
       salePrice: 1799.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Apex+Compact+Gamer',
       specs: { ram: '16GB', cpu: 'AMD Ryzen 7', storage: '1TB SSD' },
     },
     {
@@ -597,6 +662,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Desktops',
       brand: 'Chrono',
       price: 3800.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Chrono+Studio',
       specs: { ram: '32GB', cpu: 'Intel Core i9', storage: '2TB SSD' },
     },
     {
@@ -605,6 +671,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Desktops',
       brand: 'Nova',
       price: 850.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Nova+Micro',
       specs: { ram: '8GB', cpu: 'Intel Core i5', storage: '512GB SSD' },
     },
     {
@@ -613,6 +680,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Desktops',
       brand: 'Aether',
       price: 4100.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Aether+Design+Pro',
       specs: { ram: '64GB', cpu: 'Intel Core i9', storage: '2TB SSD' },
     },
     {
@@ -621,6 +689,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Desktops',
       brand: 'Apex',
       price: 6800.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Apex+Pro+Rig',
       specs: { ram: '128GB', cpu: 'AMD Threadripper', storage: '4TB SSD' },
     },
     {
@@ -629,6 +698,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Desktops',
       brand: 'Quantum',
       price: 2800.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Quantum+Edge',
       specs: { ram: '32GB', cpu: 'AMD Ryzen 7', storage: '1TB SSD' },
     },
     {
@@ -637,6 +707,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Desktops',
       brand: 'Chrono',
       price: 3100.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=ChronoVR+Ready',
       specs: { ram: '32GB', cpu: 'Intel Core i7', storage: '1TB SSD' },
     },
     {
@@ -645,6 +716,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Desktops',
       brand: 'Nova',
       price: 1750.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Nova+Business',
       specs: { ram: '16GB', cpu: 'Intel Core i7', storage: '1TB SSD' },
     },
     {
@@ -653,6 +725,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Desktops',
       brand: 'Aether',
       price: 1600.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Aether+Mini+Studio',
       specs: { ram: '16GB', cpu: 'Intel Core i7', storage: '512GB SSD' },
     },
     {
@@ -661,6 +734,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Desktops',
       brand: 'Apex',
       price: 2300.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Apex+LAN+Party',
       specs: { ram: '16GB', cpu: 'AMD Ryzen 5', storage: '1TB SSD' },
     },
     {
@@ -669,10 +743,9 @@ export const useProductStore = defineStore('products', () => {
       category: 'Desktops',
       brand: 'Quantum',
       price: 3500.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Quantum+Server',
       specs: { ram: '64GB', cpu: 'Intel Xeon', storage: '2TB SSD RAID' },
     },
-
-    // Monitors (20)
     {
       id: 12,
       name: 'Odyssey Neo G9',
@@ -680,6 +753,7 @@ export const useProductStore = defineStore('products', () => {
       brand: 'Samsung',
       price: 2499.99,
       salePrice: 2299.99,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Odyssey+Neo+G9',
       specs: { screenSize: '49"', resolution: 'Dual QHD' },
     },
     {
@@ -688,6 +762,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Monitors',
       brand: 'Chrono',
       price: 950.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=ChronoView+4K',
       specs: { screenSize: '27"', resolution: '4K' },
     },
     {
@@ -697,6 +772,7 @@ export const useProductStore = defineStore('products', () => {
       brand: 'Apex',
       price: 650.0,
       salePrice: 579.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Apex+Gaming+240Hz',
       specs: { screenSize: '27"', resolution: '1440p' },
     },
     {
@@ -705,6 +781,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Monitors',
       brand: 'Nova',
       price: 1100.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Nova+WorkWide',
       specs: { screenSize: '34"', resolution: '1440p' },
     },
     {
@@ -713,6 +790,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Monitors',
       brand: 'Quantum',
       price: 1800.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Quantum+Crystal+5K',
       specs: { screenSize: '32"', resolution: '5K' },
     },
     {
@@ -721,6 +799,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Monitors',
       brand: 'Aether',
       price: 1599.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Aether+Display+P3',
       specs: { screenSize: '27"', resolution: '4K' },
     },
     {
@@ -730,6 +809,7 @@ export const useProductStore = defineStore('products', () => {
       brand: 'Chrono',
       price: 450.0,
       salePrice: 399.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=ChronoView+Portable',
       specs: { screenSize: '15.6"', resolution: '1080p' },
     },
     {
@@ -738,6 +818,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Monitors',
       brand: 'Apex',
       price: 1250.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Apex+ProArt',
       specs: { screenSize: '32"', resolution: '4K' },
     },
     {
@@ -746,6 +827,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Monitors',
       brand: 'Nova',
       price: 299.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Nova+Basic+24',
       specs: { screenSize: '24"', resolution: '1080p' },
     },
     {
@@ -754,6 +836,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Monitors',
       brand: 'Samsung',
       price: 499.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Samsung+OfficeMaster',
       specs: { screenSize: '27"', resolution: '1440p' },
     },
     {
@@ -762,6 +845,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Monitors',
       brand: 'Quantum',
       price: 1300.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Quantum+Ultrafine',
       specs: { screenSize: '27"', resolution: '5K' },
     },
     {
@@ -770,6 +854,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Monitors',
       brand: 'Aether',
       price: 6500.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Aether+Pro+XDR',
       specs: { screenSize: '32"', resolution: '6K' },
     },
     {
@@ -778,6 +863,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Monitors',
       brand: 'Chrono',
       price: 899.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Chrono+FastFrame',
       specs: { screenSize: '25"', resolution: '1080p' },
     },
     {
@@ -786,6 +872,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Monitors',
       brand: 'Apex',
       price: 720.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Apex+Vision+4K',
       specs: { screenSize: '28"', resolution: '4K' },
     },
     {
@@ -795,6 +882,7 @@ export const useProductStore = defineStore('products', () => {
       brand: 'Nova',
       price: 680.0,
       salePrice: 599.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Nova+Dual+View',
       specs: { screenSize: '32"', resolution: '1440p' },
     },
     {
@@ -803,6 +891,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Monitors',
       brand: 'Samsung',
       price: 899.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Samsung+Smart+M8',
       specs: { screenSize: '32"', resolution: '4K' },
     },
     {
@@ -811,6 +900,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Monitors',
       brand: 'Quantum',
       price: 999.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Quantum+Curve+34',
       specs: { screenSize: '34"', resolution: '1440p' },
     },
     {
@@ -819,6 +909,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Monitors',
       brand: 'Aether',
       price: 850.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Aether+ColorPro',
       specs: { screenSize: '27"', resolution: '1440p' },
     },
     {
@@ -827,6 +918,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Monitors',
       brand: 'Chrono',
       price: 320.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Chrono+Gamer+24',
       specs: { screenSize: '24"', resolution: '1080p' },
     },
     {
@@ -835,10 +927,9 @@ export const useProductStore = defineStore('products', () => {
       category: 'Monitors',
       brand: 'Apex',
       price: 1400.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Apex+Widescreen',
       specs: { screenSize: '38"', resolution: 'UWQHD+' },
     },
-
-    // Audio (20)
     {
       id: 6,
       name: 'SoundWeave Pro',
@@ -847,6 +938,7 @@ export const useProductStore = defineStore('products', () => {
       price: 449.99,
       salePrice: 399.99,
       featured: true,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=SoundWeave+Pro',
       specs: { type: 'Headphones', connectivity: 'Wireless' },
     },
     {
@@ -855,6 +947,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Audio',
       brand: 'Aether',
       price: 279.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Aether+Buds+Pro',
       specs: { type: 'Earbuds', connectivity: 'Wireless' },
     },
     {
@@ -863,6 +956,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Audio',
       brand: 'Apex',
       price: 799.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Apex+Monitors',
       specs: { type: 'Speakers', connectivity: 'Wired' },
     },
     {
@@ -872,6 +966,7 @@ export const useProductStore = defineStore('products', () => {
       brand: 'Quantum',
       price: 199.0,
       salePrice: 159.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Quantum+Bass+Pods',
       specs: { type: 'Earbuds', connectivity: 'Wireless' },
     },
     {
@@ -880,6 +975,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Audio',
       brand: 'Chrono',
       price: 1200.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Chrono-Fi',
       specs: { type: 'Headphones', connectivity: 'Wired' },
     },
     {
@@ -888,6 +984,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Audio',
       brand: 'Nova',
       price: 599.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=NovaSound+Bar',
       specs: { type: 'Speakers', connectivity: 'Wireless' },
     },
     {
@@ -896,6 +993,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Audio',
       brand: 'SoundWeave',
       price: 149.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=SoundWeave+Go',
       specs: { type: 'Speakers', connectivity: 'Wireless' },
     },
     {
@@ -905,6 +1003,7 @@ export const useProductStore = defineStore('products', () => {
       brand: 'Aether',
       price: 129.0,
       salePrice: 99.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Aether+Buds+Lite',
       specs: { type: 'Earbuds', connectivity: 'Wireless' },
     },
     {
@@ -913,6 +1012,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Audio',
       brand: 'Apex',
       price: 350.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Apex+DJ+Pro',
       specs: { type: 'Headphones', connectivity: 'Wired' },
     },
     {
@@ -921,6 +1021,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Audio',
       brand: 'Quantum',
       price: 499.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Quantum+ANC-3000',
       specs: { type: 'Headphones', connectivity: 'Wireless' },
     },
     {
@@ -929,6 +1030,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Audio',
       brand: 'SoundWeave',
       price: 89.99,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=SoundWeave+Mini',
       specs: { type: 'Speakers', connectivity: 'Wireless' },
     },
     {
@@ -938,6 +1040,7 @@ export const useProductStore = defineStore('products', () => {
       brand: 'Aether',
       price: 779.0,
       salePrice: 699.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Aether+Pods+Max',
       specs: { type: 'Headphones', connectivity: 'Wireless' },
     },
     {
@@ -946,6 +1049,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Audio',
       brand: 'Apex',
       price: 1500.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Apex+Surround',
       specs: { type: 'Speakers', connectivity: 'Wired' },
     },
     {
@@ -954,6 +1058,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Audio',
       brand: 'Quantum',
       price: 180.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Quantum+Mic',
       specs: { type: 'Microphone', connectivity: 'Wired' },
     },
     {
@@ -962,6 +1067,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Audio',
       brand: 'Chrono',
       price: 399.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Chrono-Fi+Air',
       specs: { type: 'Earbuds', connectivity: 'Wireless' },
     },
     {
@@ -970,6 +1076,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Audio',
       brand: 'Nova',
       price: 250.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=NovaVoice',
       specs: { type: 'Speakers', connectivity: 'Wireless' },
     },
     {
@@ -978,6 +1085,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Audio',
       brand: 'SoundWeave',
       price: 650.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=SoundWeave+Studio',
       specs: { type: 'Headphones', connectivity: 'Wired' },
     },
     {
@@ -986,6 +1094,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Audio',
       brand: 'Aether',
       price: 199.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Aether+Buds+Sport',
       specs: { type: 'Earbuds', connectivity: 'Wireless' },
     },
     {
@@ -994,6 +1103,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Audio',
       brand: 'Apex',
       price: 450.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Apex+Boombox',
       specs: { type: 'Speakers', connectivity: 'Wireless' },
     },
     {
@@ -1002,16 +1112,16 @@ export const useProductStore = defineStore('products', () => {
       category: 'Audio',
       brand: 'Quantum',
       price: 400.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Quantum+Podcast+Kit',
       specs: { type: 'Microphone', connectivity: 'Wired' },
     },
-
-    // CPUs (10)
     {
       id: 135,
       name: 'Intel Core i9-14900K',
       category: 'CPUs',
       brand: 'Intel',
       price: 799.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Core+i9-14900K',
       specs: { clockSpeed: '3.2 GHz', coreCount: '24', cache: '36MB' },
     },
     {
@@ -1021,6 +1131,7 @@ export const useProductStore = defineStore('products', () => {
       brand: 'AMD',
       price: 950.0,
       salePrice: 899.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Ryzen+9+9950X',
       specs: { clockSpeed: '4.5 GHz', coreCount: '16', cache: '64MB' },
     },
     {
@@ -1029,6 +1140,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'CPUs',
       brand: 'Intel',
       price: 550.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Core+i7-14700K',
       specs: { clockSpeed: '3.4 GHz', coreCount: '20', cache: '33MB' },
     },
     {
@@ -1037,6 +1149,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'CPUs',
       brand: 'AMD',
       price: 650.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Ryzen+7+9800X',
       specs: { clockSpeed: '4.8 GHz', coreCount: '8', cache: '32MB' },
     },
     {
@@ -1046,6 +1159,7 @@ export const useProductStore = defineStore('products', () => {
       brand: 'Intel',
       price: 420.0,
       salePrice: 389.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Core+i5-14600K',
       specs: { clockSpeed: '3.5 GHz', coreCount: '14', cache: '24MB' },
     },
     {
@@ -1054,6 +1168,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'CPUs',
       brand: 'AMD',
       price: 380.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Ryzen+5+9600X',
       specs: { clockSpeed: '5.0 GHz', coreCount: '6', cache: '32MB' },
     },
     {
@@ -1062,6 +1177,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'CPUs',
       brand: 'Intel',
       price: 180.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Core+i3-14100',
       specs: { clockSpeed: '3.5 GHz', coreCount: '4', cache: '12MB' },
     },
     {
@@ -1070,6 +1186,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'CPUs',
       brand: 'AMD',
       price: 220.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Ryzen+3+9300X',
       specs: { clockSpeed: '4.5 GHz', coreCount: '4', cache: '8MB' },
     },
     {
@@ -1078,6 +1195,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'CPUs',
       brand: 'AMD',
       price: 12000.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Threadripper+Pro',
       specs: { clockSpeed: '2.5 GHz', coreCount: '96', cache: '384MB' },
     },
     {
@@ -1086,16 +1204,16 @@ export const useProductStore = defineStore('products', () => {
       category: 'CPUs',
       brand: 'Intel',
       price: 7500.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Intel+Xeon+W9',
       specs: { clockSpeed: '1.9 GHz', coreCount: '56', cache: '105MB' },
     },
-
-    // GPUs (10)
     {
       id: 145,
       name: 'NVIDIA GeForce RTX 5090',
       category: 'GPUs',
       brand: 'NVIDIA',
       price: 2599.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=RTX+5090',
       specs: { power: '450W', pcie: '5.0' },
     },
     {
@@ -1104,6 +1222,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'GPUs',
       brand: 'NVIDIA',
       price: 1699.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=RTX+5080',
       specs: { power: '320W', pcie: '5.0' },
     },
     {
@@ -1113,6 +1232,7 @@ export const useProductStore = defineStore('products', () => {
       brand: 'AMD',
       price: 1499.0,
       salePrice: 1399.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Radeon+RX+8900XTX',
       specs: { power: '400W', pcie: '5.0' },
     },
     {
@@ -1121,6 +1241,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'GPUs',
       brand: 'NVIDIA',
       price: 999.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=RTX+5070',
       specs: { power: '280W', pcie: '5.0' },
     },
     {
@@ -1129,6 +1250,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'GPUs',
       brand: 'AMD',
       price: 899.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Radeon+RX+8800XT',
       specs: { power: '300W', pcie: '5.0' },
     },
     {
@@ -1138,6 +1260,7 @@ export const useProductStore = defineStore('products', () => {
       brand: 'NVIDIA',
       price: 650.0,
       salePrice: 599.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=RTX+5060',
       specs: { power: '200W', pcie: '5.0' },
     },
     {
@@ -1146,6 +1269,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'GPUs',
       brand: 'AMD',
       price: 550.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Radeon+RX+8700XT',
       specs: { power: '230W', pcie: '5.0' },
     },
     {
@@ -1154,6 +1278,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'GPUs',
       brand: 'Intel',
       price: 450.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Intel+Arc+A770',
       specs: { power: '225W', pcie: '4.0' },
     },
     {
@@ -1162,6 +1287,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'GPUs',
       brand: 'NVIDIA',
       price: 9000.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=RTX+6000+Ada',
       specs: { power: '300W', pcie: '4.0' },
     },
     {
@@ -1170,16 +1296,16 @@ export const useProductStore = defineStore('products', () => {
       category: 'GPUs',
       brand: 'AMD',
       price: 5200.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Radeon+Pro+W7900',
       specs: { power: '295W', pcie: '4.0' },
     },
-
-    // PSUs (10)
     {
       id: 155,
       name: 'SeaSonic PRIME TX-1600',
       category: 'PSUs',
       brand: 'SeaSonic',
       price: 599.99,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=PRIME+TX-1600',
       specs: { wattage: '1600W', modularity: 'Fully Modular', formFactor: 'ATX' },
     },
     {
@@ -1189,6 +1315,7 @@ export const useProductStore = defineStore('products', () => {
       brand: 'Corsair',
       price: 649.99,
       salePrice: 599.99,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Corsair+AX1600i',
       specs: { wattage: '1600W', modularity: 'Fully Modular', formFactor: 'ATX' },
     },
     {
@@ -1197,6 +1324,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'PSUs',
       brand: 'be quiet!',
       price: 349.99,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Dark+Power+13',
       specs: { wattage: '1000W', modularity: 'Fully Modular', formFactor: 'ATX' },
     },
     {
@@ -1206,6 +1334,7 @@ export const useProductStore = defineStore('products', () => {
       brand: 'EVGA',
       price: 299.99,
       salePrice: 269.99,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=EVGA+1000+G7',
       specs: { wattage: '1000W', modularity: 'Fully Modular', formFactor: 'ATX' },
     },
     {
@@ -1214,6 +1343,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'PSUs',
       brand: 'SeaSonic',
       price: 159.99,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=SeaSonic+FOCUS',
       specs: { wattage: '850W', modularity: 'Semi-Modular', formFactor: 'ATX' },
     },
     {
@@ -1222,6 +1352,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'PSUs',
       brand: 'Corsair',
       price: 149.99,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Corsair+RM850e',
       specs: { wattage: '850W', modularity: 'Fully Modular', formFactor: 'ATX' },
     },
     {
@@ -1230,6 +1361,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'PSUs',
       brand: 'be quiet!',
       price: 119.99,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Pure+Power+12+M',
       specs: { wattage: '750W', modularity: 'Fully Modular', formFactor: 'ATX' },
     },
     {
@@ -1238,6 +1370,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'PSUs',
       brand: 'EVGA',
       price: 89.99,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=EVGA+650+BQ',
       specs: { wattage: '650W', modularity: 'Semi-Modular', formFactor: 'ATX' },
     },
     {
@@ -1246,6 +1379,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'PSUs',
       brand: 'SeaSonic',
       price: 79.99,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=SeaSonic+Core+650W',
       specs: { wattage: '650W', modularity: 'Non-Modular', formFactor: 'ATX' },
     },
     {
@@ -1254,16 +1388,16 @@ export const useProductStore = defineStore('products', () => {
       category: 'PSUs',
       brand: 'Corsair',
       price: 189.99,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Corsair+SF750',
       specs: { wattage: '750W', modularity: 'Fully Modular', formFactor: 'SFX' },
     },
-
-    // Keyboards (10)
     {
       id: 7,
       name: 'ErgoMech Keyboard Pro',
       category: 'Keyboards',
       brand: 'ErgoMech',
       price: 229.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=ErgoMech+Pro',
       specs: { size: 'Split', switchType: 'Mechanical' },
     },
     {
@@ -1273,6 +1407,7 @@ export const useProductStore = defineStore('products', () => {
       brand: 'Chrono',
       price: 189.0,
       salePrice: 169.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Chrono+Pro',
       specs: { size: 'Full-size', switchType: 'Mechanical' },
     },
     {
@@ -1281,6 +1416,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Keyboards',
       brand: 'Apex',
       price: 249.99,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Apex+Pro+TKL',
       specs: { size: 'TKL', switchType: 'Mechanical' },
     },
     {
@@ -1290,6 +1426,7 @@ export const useProductStore = defineStore('products', () => {
       brand: 'Logi',
       price: 149.99,
       salePrice: 129.99,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Logi+MX+Keys',
       specs: { size: 'Full-size', switchType: 'Membrane' },
     },
     {
@@ -1298,6 +1435,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Keyboards',
       brand: 'Quantum',
       price: 179.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=QuantumForce',
       specs: { size: 'TKL', switchType: 'Mechanical' },
     },
     {
@@ -1306,6 +1444,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Keyboards',
       brand: 'Aether',
       price: 199.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Aether+Scribe',
       specs: { size: '75%', switchType: 'Mechanical' },
     },
     {
@@ -1314,6 +1453,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Keyboards',
       brand: 'Nova',
       price: 89.99,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Nova+Compact',
       specs: { size: '60%', switchType: 'Mechanical' },
     },
     {
@@ -1322,6 +1462,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Keyboards',
       brand: 'ErgoMech',
       price: 199.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=ErgoMech+Lite',
       specs: { size: 'Split', switchType: 'Mechanical' },
     },
     {
@@ -1330,6 +1471,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Keyboards',
       brand: 'Chrono',
       price: 210.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Chrono-Gamer',
       specs: { size: 'Full-size', switchType: 'Mechanical' },
     },
     {
@@ -1338,16 +1480,16 @@ export const useProductStore = defineStore('products', () => {
       category: 'Keyboards',
       brand: 'Logi',
       price: 79.99,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Logi+Wave',
       specs: { size: 'Full-size', switchType: 'Membrane' },
     },
-
-    // Mice (10)
     {
       id: 76,
       name: 'Apex Pro Gaming Mouse',
       category: 'Mice',
       brand: 'Apex',
       price: 149.99,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Apex+Pro+Mouse',
       specs: { connectivity: 'Wireless' },
     },
     {
@@ -1356,6 +1498,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Mice',
       brand: 'Logi',
       price: 129.99,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Logi+MX5',
       specs: { connectivity: 'Wireless' },
     },
     {
@@ -1365,6 +1508,7 @@ export const useProductStore = defineStore('products', () => {
       brand: 'Quantum',
       price: 119.0,
       salePrice: 99.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Quantum+Catalyst',
       specs: { connectivity: 'Wireless' },
     },
     {
@@ -1373,6 +1517,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Mice',
       brand: 'Aether',
       price: 99.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Aether+Precision',
       specs: { connectivity: 'Wireless' },
     },
     {
@@ -1382,6 +1527,7 @@ export const useProductStore = defineStore('products', () => {
       brand: 'Chrono',
       price: 85.0,
       salePrice: 69.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=ChronoGrip',
       specs: { connectivity: 'Wired' },
     },
     {
@@ -1390,6 +1536,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Mice',
       brand: 'Nova',
       price: 49.99,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Nova+Wireless',
       specs: { connectivity: 'Wireless' },
     },
     {
@@ -1398,6 +1545,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Mice',
       brand: 'Apex',
       price: 189.99,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Apex+Venom+Air',
       specs: { connectivity: 'Wireless' },
     },
     {
@@ -1406,6 +1554,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Mice',
       brand: 'Logi',
       price: 89.99,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Logi+Lift',
       specs: { connectivity: 'Wireless' },
     },
     {
@@ -1414,6 +1563,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'Mice',
       brand: 'Quantum',
       price: 79.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Quantum+Ion',
       specs: { connectivity: 'Wired' },
     },
     {
@@ -1422,16 +1572,16 @@ export const useProductStore = defineStore('products', () => {
       category: 'Mice',
       brand: 'Aether',
       price: 110.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Aether+Sculpt',
       specs: { connectivity: 'Wired' },
     },
-
-    // RAM (20)
     {
       id: 181,
       name: 'Corsair Vengeance 32GB',
       category: 'RAM',
       brand: 'Corsair',
       price: 189.99,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Vengeance+32GB',
       specs: { capacity: '32GB', ddrVersion: 'DDR5' },
     },
     {
@@ -1440,6 +1590,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'RAM',
       brand: 'G.Skill',
       price: 219.99,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Trident+Z5+32GB',
       specs: { capacity: '32GB', ddrVersion: 'DDR5' },
     },
     {
@@ -1449,6 +1600,7 @@ export const useProductStore = defineStore('products', () => {
       brand: 'Kingston',
       price: 89.99,
       salePrice: 79.99,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Fury+Beast+16GB',
       specs: { capacity: '16GB', ddrVersion: 'DDR5' },
     },
     {
@@ -1457,6 +1609,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'RAM',
       brand: 'Crucial',
       price: 159.99,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Crucial+Pro+32GB',
       specs: { capacity: '32GB', ddrVersion: 'DDR5' },
     },
     {
@@ -1465,6 +1618,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'RAM',
       brand: 'Corsair',
       price: 450.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Dominator+64GB',
       specs: { capacity: '64GB', ddrVersion: 'DDR5' },
     },
     {
@@ -1474,6 +1628,7 @@ export const useProductStore = defineStore('products', () => {
       brand: 'G.Skill',
       price: 170.0,
       salePrice: 149.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Ripjaws+S5+32GB',
       specs: { capacity: '32GB', ddrVersion: 'DDR5' },
     },
     {
@@ -1482,6 +1637,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'RAM',
       brand: 'Kingston',
       price: 45.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=ValueRAM+8GB',
       specs: { capacity: '8GB', ddrVersion: 'DDR4' },
     },
     {
@@ -1491,6 +1647,7 @@ export const useProductStore = defineStore('products', () => {
       brand: 'Crucial',
       price: 75.0,
       salePrice: 59.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Ballistix+16GB',
       specs: { capacity: '16GB', ddrVersion: 'DDR4' },
     },
     {
@@ -1499,6 +1656,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'RAM',
       brand: 'Corsair',
       price: 69.99,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Vengeance+LPX',
       specs: { capacity: '16GB', ddrVersion: 'DDR4' },
     },
     {
@@ -1507,6 +1665,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'RAM',
       brand: 'G.Skill',
       price: 65.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Aegis+16GB',
       specs: { capacity: '16GB', ddrVersion: 'DDR4' },
     },
     {
@@ -1516,6 +1675,7 @@ export const useProductStore = defineStore('products', () => {
       brand: 'Kingston',
       price: 399.0,
       salePrice: 349.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Fury+Renegade+64GB',
       specs: { capacity: '64GB', ddrVersion: 'DDR5' },
     },
     {
@@ -1524,6 +1684,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'RAM',
       brand: 'Crucial',
       price: 50.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Crucial+SODIMM',
       specs: { capacity: '8GB', ddrVersion: 'DDR4' },
     },
     {
@@ -1532,6 +1693,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'RAM',
       brand: 'Corsair',
       price: 350.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Vengeance+64GB',
       specs: { capacity: '64GB', ddrVersion: 'DDR5' },
     },
     {
@@ -1540,6 +1702,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'RAM',
       brand: 'G.Skill',
       price: 250.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Trident+Z+Royal',
       specs: { capacity: '32GB', ddrVersion: 'DDR4' },
     },
     {
@@ -1548,6 +1711,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'RAM',
       brand: 'Kingston',
       price: 180.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Fury+Impact+32GB',
       specs: { capacity: '32GB', ddrVersion: 'DDR5' },
     },
     {
@@ -1556,6 +1720,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'RAM',
       brand: 'Crucial',
       price: 150.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Crucial+32GB+Kit',
       specs: { capacity: '32GB', ddrVersion: 'DDR4' },
     },
     {
@@ -1564,6 +1729,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'RAM',
       brand: 'Corsair',
       price: 199.99,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Vengeance+RGB',
       specs: { capacity: '32GB', ddrVersion: 'DDR5' },
     },
     {
@@ -1572,6 +1738,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'RAM',
       brand: 'G.Skill',
       price: 165.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Flare+X5+32GB',
       specs: { capacity: '32GB', ddrVersion: 'DDR5' },
     },
     {
@@ -1580,6 +1747,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'RAM',
       brand: 'Kingston',
       price: 180.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Beast+RGB+32GB',
       specs: { capacity: '32GB', ddrVersion: 'DDR5' },
     },
     {
@@ -1588,11 +1756,13 @@ export const useProductStore = defineStore('products', () => {
       category: 'RAM',
       brand: 'Crucial',
       price: 299.0,
+      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Crucial+Pro+64GB',
       specs: { capacity: '64GB', ddrVersion: 'DDR5' },
     },
   ])
 
   const cart = ref([])
+  const uiStore = useUIStore()
 
   const cartItemCount = computed(() => {
     return cart.value.reduce((acc, item) => acc + item.quantity, 0)
@@ -1624,6 +1794,7 @@ export const useProductStore = defineStore('products', () => {
     } else {
       cart.value.push({ ...product, quantity: 1 })
     }
+    uiStore.showNotification(`${product.name} added to cart!`)
   }
 
   function removeFromCart(productId) {
