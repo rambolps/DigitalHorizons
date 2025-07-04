@@ -14,8 +14,9 @@ const uiStore = useUIStore()
 <style scoped>
 .notification-popup {
   position: fixed;
-  top: 90px;
-  right: 20px;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
   background-color: var(--sale-bg);
   border: 1px solid var(--sale-color);
   color: var(--sale-text);
@@ -36,6 +37,6 @@ const uiStore = useUIStore()
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
-  transform: translateY(-20px);
+  transform: translate(-50%, -20px);
 }
 </style>
