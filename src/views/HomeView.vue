@@ -48,10 +48,7 @@ function goToShopCategory(category) {
       <div id="featured-sale-item" v-if="featuredSaleItem">
         <div class="featured-sale-section">
           <div class="featured-sale-img">
-            <img
-              :src="`https://placehold.co/600x600/161B22/e6edf3?text=${encodeURIComponent(featuredSaleItem.name)}`"
-              :alt="featuredSaleItem.name"
-            />
+            <img :src="featuredSaleItem.imageUrl" :alt="featuredSaleItem.name" />
           </div>
           <div class="featured-sale-info">
             <h2>{{ featuredSaleItem.name }}</h2>
@@ -89,10 +86,7 @@ function goToShopCategory(category) {
       <div class="product-grid">
         <div v-for="product in featuredProducts" :key="product.id" class="product-card">
           <div class="product-image">
-            <img
-              :src="`https://placehold.co/400x400/161B22/e6edf3?text=${encodeURIComponent(product.name)}`"
-              :alt="product.name"
-            />
+            <img :src="product.imageUrl" :alt="product.name" />
             <span v-if="product.salePrice" class="sale-badge">SALE</span>
           </div>
           <div class="product-info">
