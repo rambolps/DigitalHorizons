@@ -1,10 +1,11 @@
 <script setup>
 import { ref, computed, watch } from 'vue'
 import { useProductStore } from '@/stores/products'
-import { useRoute } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
 
 const productStore = useProductStore()
 const route = useRoute()
+const router = useRouter()
 
 const activeFilters = ref({
   categories: [],
@@ -48,7 +49,6 @@ const categorySpecificFilters = computed(() => {
     ].sort()
     if (values.length > 1) {
       filters[specKey] = { label, values }
-      // FIX: Initialize the spec array here if it doesn't exist.
       if (!activeFilters.value.specs[specKey]) {
         activeFilters.value.specs[specKey] = []
       }
@@ -84,10 +84,24 @@ function handleCategoryChange() {
   activeFilters.value.specs = {}
 }
 
+function clearSearch() {
+  const query = { ...route.query }
+  delete query.search
+  router.push({ query })
+}
+
+watch(
+  () => route.query.search,
+  (newSearchTerm) => {
+    activeFilters.value.searchTerm = newSearchTerm || ''
+  },
+  { immediate: true },
+)
+
 watch(
   () => route.query.category,
   (newCategory) => {
-    if (newCategory) {
+    if (newCategory && !activeFilters.value.categories.includes(newCategory)) {
       activeFilters.value.categories = [newCategory]
       handleCategoryChange()
     }
@@ -100,6 +114,27 @@ watch(
   <div class="page-section">
     <div class="shop-container">
       <aside class="filters">
+        <div class="filter-group">
+          <h3>Search</h3>
+          <p v-if="activeFilters.searchTerm" id="search-term-display">
+            "{{ activeFilters.searchTerm }}"
+          </p>
+          <p
+            v-else
+            id="search-term-display"
+            style="color: var(--text-secondary); font-style: italic"
+          >
+            No search term
+          </p>
+          <button
+            v-if="activeFilters.searchTerm"
+            @click="clearSearch"
+            class="btn"
+            style="width: 100%; margin-top: 1rem"
+          >
+            Clear Search
+          </button>
+        </div>
         <div class="filter-group">
           <h3>Deals</h3>
           <label>
@@ -128,6 +163,7 @@ watch(
             <div v-for="value in filter.values" :key="value">
               <label>
                 <input type="checkbox" :value="value" v-model="activeFilters.specs[key]" />
+                {{ value }}
               </label>
             </div>
           </div>

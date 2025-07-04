@@ -1,15 +1,22 @@
 <script setup>
-import { RouterLink } from 'vue-router'
+import { ref } from 'vue'
+import { RouterLink, useRouter } from 'vue-router'
 import { useProductStore } from '@/stores/products'
 
 const productStore = useProductStore()
+const router = useRouter()
+const searchQuery = ref('')
+
+function handleSearch() {
+  router.push({ name: 'shop', query: { search: searchQuery.value.trim() } })
+}
 </script>
 
 <template>
   <header class="main-header">
     <div class="container">
       <RouterLink to="/" class="logo">Digital<span>Horizons</span></RouterLink>
-      <form class="search-bar">
+      <form class="search-bar" @submit.prevent="handleSearch">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="20"
@@ -25,7 +32,7 @@ const productStore = useProductStore()
             d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
           />
         </svg>
-        <input type="search" placeholder="Search for products..." />
+        <input type="search" v-model="searchQuery" placeholder="Search for products..." />
       </form>
       <nav class="main-nav">
         <ul>
