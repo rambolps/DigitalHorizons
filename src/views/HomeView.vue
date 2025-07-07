@@ -244,7 +244,7 @@ function goToShopCategory(category) {
 .product-image {
   width: 100%;
   height: 200px;
-  background-color: #21262d;
+  background-color: #fff;
   overflow: hidden;
   position: relative;
 }
@@ -252,7 +252,7 @@ function goToShopCategory(category) {
 .product-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .product-card .sale-badge {
