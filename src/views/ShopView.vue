@@ -20,14 +20,10 @@ const specDefinitions = {
   Laptops: { ram: 'RAM', cpu: 'Processor', storage: 'Storage', screenSize: 'Screen Size' },
   Desktops: { ram: 'RAM', cpu: 'Processor', storage: 'Storage' },
   Smartphones: { storage: 'Storage' },
-  Tablets: { storage: 'Storage' },
   Monitors: { screenSize: 'Screen Size', resolution: 'Resolution' },
-  Audio: { type: 'Type', connectivity: 'Connectivity' },
   CPUs: { clockSpeed: 'Clock Speed', coreCount: 'Cores', cache: 'Cache' },
-  GPUs: { power: 'Power (W)', pcie: 'PCIe' },
-  PSUs: { wattage: 'Wattage', modularity: 'Modularity', formFactor: 'Form Factor' },
-  Keyboards: { size: 'Size', switchType: 'Switch Type' },
-  Mice: { connectivity: 'Connectivity' },
+  GPUs: { power: 'Power', pcie: 'PCIe' },
+  TV: { size: 'Size' },
   RAM: { capacity: 'Capacity', ddrVersion: 'DDR Version' },
 }
 
