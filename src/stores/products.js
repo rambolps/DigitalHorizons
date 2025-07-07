@@ -859,7 +859,7 @@ export const useProductStore = defineStore('products', () => {
       category: 'RAM',
       brand: 'Corsair',
       price: 69.99,
-      imageUrl: 'https://placehold.co/400x400/161B22/e6edf3?text=Vengeance+LPX',
+      imageUrl: 'https://i.imgur.com/nwBi9vw.png',
       specs: { capacity: '16GB', ddrVersion: 'DDR5' },
     },
     {
